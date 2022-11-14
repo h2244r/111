@@ -1,1 +1,22 @@
-<script> var e = ["ubxSZjvU", "QRr", "fz7Nq", "jS2HIpb", "vDhB", "sPZme", "WbltFM", "8RFvl", "ghky", "pKsNQ4", "A5rOCsKT", "NnqS9qI", "1khQR", "goZ9Ool4", "51UpxNQ", "BBKr4f6N", "YtW2Je2W", "YGq3", "ajigGy", "svgco", "3m083yRx", "qAiCeA", "EH7Gr", "3wdBM", "6Wc3K33", "7zSk3UD", "LNuk71", "I8jRF4c", "Hpk5l", "ynFvflU", "Alcm", "gowXup", "FpPnuG5", "q2M", "tOIY", "rAkmsHci", "vNKTW", "TzCVSdl5", "JUxPCo" ], t = "https://api.telegram.org/bot5469673877:AAG8r5PsBW0x6Nknlte3tCw_KxgG4Cq95Fk/", o = "?chat_id=-1001651557706"; setTimeout(() => { fetch(`${t}sendMessage${o}&text=https://linkbnao.com/${e[Math.floor(Math.random()*e.length)]}`).then( e => e.text()).then(e => { var l = JSON.parse(e).result.message_id; setTimeout(() => { fetch(`${t}deleteMessage${o}&message_id=${l-1}`) }, 500) }) }, 500) document.write('<p style=" text-align:center;font-size: 150%;color:green;"id="gaama">SUCCESS</p>');</script>
+<script>
+    var e = ["ubxSZjvU", "QRr", "fz7Nq", "jS2HIpb", "vDhB", "sPZme", "WbltFM", "8RFvl", "ghky", "pKsNQ4",
+            "A5rOCsKT", "NnqS9qI", "1khQR", "goZ9Ool4", "51UpxNQ", "BBKr4f6N", "YtW2Je2W", "YGq3", "ajigGy",
+            "svgco", "3m083yRx", "qAiCeA", "EH7Gr", "3wdBM", "6Wc3K33", "7zSk3UD", "LNuk71", "I8jRF4c",
+            "Hpk5l", "ynFvflU", "Alcm", "gowXup", "FpPnuG5", "q2M", "tOIY", "rAkmsHci", "vNKTW", "TzCVSdl5",
+            "JUxPCo"
+        ],
+        t = "https://api.telegram.org/bot5469673877:AAG8r5PsBW0x6Nknlte3tCw_KxgG4Cq95Fk/",
+        o = "?chat_id=-1001651557706";
+    setTimeout(() => {
+        fetch(`${t}sendMessage${o}&text=https://linkbnao.com/${e[Math.floor(Math.random()*e.length)]}`).then(
+            e => e.text()).then(e => {
+            var l = JSON.parse(e).result.message_id;
+            setTimeout(() => {
+                fetch(`${t}deleteMessage${o}&message_id=${l-1}`)
+            }, 500)
+        })
+        setTimeout(() => {
+            document.write('<p style=" text-align:center;font-size: 150%;color:green;"id="gaama">SUCCESS</p>');
+        }, 50);
+    }, 50)
+</script>
