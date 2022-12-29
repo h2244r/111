@@ -36,13 +36,13 @@ function count_script() {
                 }
             }, 500);
         }
-    }, 50)
+    }, 10)
 }
 
 function last_page() {
     let i = setInterval(() => {
         if (document.querySelector("div a[class*='get-link']") && document.querySelector(
-            "div a[class*='get-link']").innerHTML == 'Get Link') {
+                "div a[class*='get-link']").innerHTML == 'Get Link') {
             clearInterval(i);
             setTimeout(() => {
                 document.querySelector("div a[class*='get-link']").click();
@@ -51,15 +51,21 @@ function last_page() {
                 }, 50);
             }, 50);
         }
-    }, 1200)
+    }, 1000)
 }
 
 function auto_run() {
     let i = setInterval(() => {
-        if (window.location.host == 'www.google.com' && document.querySelector(
-            "span[class][role=\"text\"]")) {
-            clearInterval(i);
-            document.querySelectorAll("span[class][role=\"text\"]")[0].parentElement.click();
+        if (window.location.host == 'www.google.com') {
+            try {
+                document.querySelectorAll('a').forEach(obj => {
+                    if (arr.includes(obj.host)) {
+                        clearInterval(i);
+                        obj.click();
+                        throw 'Break';
+                    }
+                })
+            } catch (e) {}
         }
         if (arr.includes(window.location.host)) {
             setTimeout(() => {
@@ -74,7 +80,7 @@ function auto_run() {
                 }
             }, 500)
         }
-    }, 500);
+    }, 1000);
 }
 setInterval(() => {
     if (!window.location.href.includes('.php')) {
