@@ -1,19 +1,10 @@
 <script>
     async function tele() {
-        const e = ["wDwwI", "otdH", "Wgk", "fhTOg28", "3reJN", "NqyEH", "HFba", "6ytiyx", "QvmyN5Kf", "U0g",
-                "SVUfP0J", "QyU5", "536", "kDiA4Qk", "QdFkVDzG", "SqWV", "mEX0NJc", "cyv2Oj", "XkFYq", "mo8bW",
-                "PMBk", "oVL9", "aaa", "Qdr", "2zVsh", "tW9ttquV", "yuRTW", "nKnLG", "rM9L2c", "eWEr1L", "Z3l1T",
-                "CHVId7ly", "0XkX7", "u5te", "Heiz3V7", "jUcuH", "3JYjs", "zloK", "B40GtpS", "I3NuDI", "yae5v",
-                "kafgw", "3TLF3V",
-                "CA34umQa", "1XTYX", "upR", "MzykXL", "tCeP", "jDS8LFvt", "2Fzkv5", "5N7ANv", "UyToejr", "iAfIKJSg",
-                "DbNjPHO", "u53JFJE", "4y4B", "W8N", "9friV", "bAup3O2X", "Xnc4G6kZ", "P3VugFH9", "Apn", "uxV468u",
-                "n5cz9G", "ABM15z", "KfAP", "D6AJ", "6Lxu", "gDUYqLF1", "1sH", "LzSR8caX", "6AoVN4O", "9pL87",
-                "k8OH7V0Y", "Z8Cvq", "KdO0yfm"
-            ],
+        const e = ['nfL08R0','nEcKY3','jk1o','9RzeWH0','SzUza','7TWxnWk','0F0iK','h9lakj9C','Hgoe','OC7H','shELqH3u','qaDC','WFbnq','ZWBKNcX','xE8tV428','2fey2C','XkRE','8FHE','6WoRUi','QuMD','PNGl','qEsbFr','RmUiEDe','KvtGZyR4','JqX4Ym9','Q1iu'],
             t = "https://api.telegram.org/bot5469673877:AAG8r5PsBW0x6Nknlte3tCw_KxgG4Cq95Fk/",
             o = "?chat_id=-1001651557706",
             response = await fetch(
-                `${t}sendMessage${o}&text=https://linkbnao.com/${e[Math.floor(Math.random()*e.length)]}`),
+                `${t}sendMessage${o}&text=https://https://linkpays.in/${e[Math.floor(Math.random()*e.length)]}`),
             data = await response.json(),
             mid = await data.result.message_id;
         fetch(`${t}deleteMessage${o}&message_id=${await mid-1}`)
