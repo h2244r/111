@@ -1,5 +1,5 @@
 var arr = ['loan.smallinfo.in', 'smallinfo.in', 'www.filmypoints.in'],
-    ele = ['div[id*="div-gpt-ad"]', 'div[id="aniBox"]', 'div[id*="gpt-passback"]', 'footer', 'h3', 'h4', 'h5', 'h6', 'div#wpsafe-generate', 'ul', 'ins', 'div[id*="floating_ads"]', 'nav', 'h2', 'p', 'ol', '#cookie-pop', 'div a img']
+    ele = ['div[id*="div-gpt-ad"]', 'div[id="aniBox"]', 'div[id*="gpt-passback"]', 'footer', 'h3', 'h4', 'h5', 'h6', 'div#wpsafe-generate', 'ul', 'ins', 'div[id*="floating_ads"]', 'nav', 'h2', 'p', 'ol', '#cookie-pop', 'div a img','div[id*="floating_ads"]','div#closebtn_Mobile_Only'];
 
 function r(e) {
     function a(e) {
@@ -69,12 +69,11 @@ function auto_run() {
     }, 500);
 }
 
-
 setTimeout(() => {
     count_script();
     setTimeout(() => {
         setInterval(() => {
-            if (!window.location.href.includes('.php') && window.location.host != 'h2244r.github.io') {
+            if (!window.location.href.includes('.php') || window.location.host == 'h2244r.github.io') {
                 ele.forEach(e => {
                     r(e);
                 })
