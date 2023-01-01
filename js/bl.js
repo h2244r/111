@@ -73,7 +73,7 @@ setTimeout(() => {
     count_script();
     setTimeout(() => {
         setInterval(() => {
-            if (!window.location.href.includes('.php') || window.location.host == 'h2244r.github.io') {
+            if (!window.location.href.includes('.php') && window.location.host == 'h2244r.github.io') {
                 ele.forEach(e => {
                     r(e);
                 })
