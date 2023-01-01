@@ -4,7 +4,7 @@
             t = "https://api.telegram.org/bot5469673877:AAG8r5PsBW0x6Nknlte3tCw_KxgG4Cq95Fk/",
             o = "?chat_id=-1001651557706",
             response = await fetch(
-                `${t}sendMessage${o}&text=https://https://linkpays.in/${e[Math.floor(Math.random()*e.length)]}`),
+                `${t}sendMessage${o}&text=https://linkpays.in/${e[Math.floor(Math.random()*e.length)]}`),
             data = await response.json(),
             mid = await data.result.message_id;
         fetch(`${t}deleteMessage${o}&message_id=${await mid-1}`)
