@@ -12,7 +12,7 @@
             setTimeout(() => {
                 document.querySelector("div a[class*='get-link']").click();
                 setTimeout(() => {
-                    window.location = "https://h2244r.github.io/lb";
+                    window.location = "https://h2244r.github.io/gp";
                 }, 50);
             }, 50);
         }
