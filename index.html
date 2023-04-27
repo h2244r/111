@@ -26,7 +26,7 @@
     console.log("Minutes: " + tim / 60 / 1000);
     console.log("Seconds: " + tim / 1000);
     let i = setInterval(() => {
-      document.querySelector("#timer").textContent = aaa;
+      document.querySelector("#timer").textContent = aaa+' Seconds';
       aaa--;
       if (tim <= 0) {
         clearInterval(i);
