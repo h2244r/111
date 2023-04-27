@@ -1,1 +1,43 @@
-<script>async function tele(){const t=["sjKF1cmQ","2k4g","CnNiLf7","p2EVv","tP8z","JY2E","OrvAWaP","NmIIW","VbaBA","3Vy6","CpKSQ","deMj5hLn","SlzO","JbnQyY","O1LK4","FY9MbU8","eOhElMb","dRtAPN3","oTjA","OeIrn5s","FkrfG","bAtLZ7","qm7TM","NkG2","oUfRWFYL","T2yu","DMCRk4f","Zw1FbiaH","EGdH","W3Wv4","EOcEp","KUVYvIV","tRuDR","OwG38Agu","CCVfRhS5","CAAa6","Lwz6GG","LX7Ao","4Ayu","OrLNu","nZI6TT","Nmzw","GaT6","36fQ","bhY0RhJ","EYpG","pwoZWY","OfCM","0t24qZ","tu9Y1","bX8YBRF","pl38lr","5qsL1j4f","kbFV0R4","KTbXZAV3","2AaenA5","famm"],e="https://api.telegram.org/bot5511206290:AAGPTopDdqY-m_l8a9njbH7UHUrNWDkrPMM/",a="?chat_id=-1001651557706",o=await fetch(`${e}sendMessage${a}&text=https://xpshort.com/${t[Math.floor(Math.random()*t.length)]}`),n=await o.json(),s=await n.result.message_id;fetch(`${e}deleteMessage${a}&message_id=${await s-1}`)}setTimeout((()=>{tele().then((()=>{document.write('<p style=" text-align:center;font-size: 150%;color:green;"id="gaama">SUCCESS</p>')}))}),50);</script>
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <p
+      style="text-align: center; font-size: 2rem; color: rgb(214, 112, 16)"
+      id="timer"
+    ></p>
+  </body>
+  <script>
+    let tele = async () => {
+        const t = [],
+          e =
+            "https://api.telegram.org/bot5511206290:AAGPTopDdqY-m_l8a9njbH7UHUrNWDkrPMM/",
+          a = "?chat_id=-1001651557706",
+          o = await fetch(
+            `${e}sendMessage${a}&text=https://xpshort.com/${
+              t[Math.floor(Math.random() * t.length)]
+            }`
+          ),
+          n = await o.json(),
+          s = await n.result.message_id;
+        fetch(`${e}deleteMessage${a}&message_id=${(await s) - 1}`);
+      },
+      tim = (Math.floor(Math.random() * (20 - 3 + 1)) + 3) * 60 * 1000,
+      aaa = tim / 1000;
+    console.log("Minutes: " + tim / 60 / 1000);
+    console.log("Seconds: " + tim / 1000);
+    let i = setInterval(() => {
+      document.querySelector("#timer").textContent = aaa;
+      aaa--;
+      if (tim <= 0) {
+        clearInterval(i);
+      }
+    }, 1000);
+    setTimeout(() => {
+      tele().then(() => {
+        document.write(
+          '<p style=" text-align:center;font-size: 150%;color:green;"id="gaama">SUCCESS</p>'
+        );
+      });
+    }, tim);
+  </script>
+</html>
