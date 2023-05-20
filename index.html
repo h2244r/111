@@ -7,21 +7,7 @@
     ></p>
   </body>
   <script>
-    let tele = async () => {
-        const t = ["BH9dGB3a","cFk6L","F9Xw7Uj3","UP0eLvd","floMFhC","CrPY8rc","U0qfNhLa","Dkn4we2","IHZFN","ag0GWYc","BsZBlT0","xFOX","nXGmcB","0Z02P6M","PoCy","S3Vxqj","bw9Gwg","8m9Z628","RXyBm","nhkpZE2l","Xmq8kC","yczdjGg","qYvq","KKlC1RSP","SXH3","F24L54qO","pVEKwcG9","VnMo","loE8E24w","45lx5","eJvWuZa","WgNb7","uVGvkb","2DOdWj","xVFUP","quoY","0pejub1","gJghz","vMrb7","s9jHAwQQ","2uRnw","OfLDIEhE","JsCMx","S8hy5z","MQwodn4","ie7s56","AzHp4L","oWKQO","FhAs","sPzjcvp"],
-          e =
-            "https://api.telegram.org/bot5511206290:AAGPTopDdqY-m_l8a9njbH7UHUrNWDkrPMM/",
-          a = "?chat_id=-1001651557706",
-          o = await fetch(
-            `${e}sendMessage${a}&text=https://xpshort.com/${
-              t[Math.floor(Math.random() * t.length)]
-            }`
-          ),
-          n = await o.json(),
-          s = await n.result.message_id;
-        fetch(`${e}deleteMessage${a}&message_id=${(await s) - 1}`);
-      },
-      tim = (Math.floor(Math.random() * (20 - 3 + 1)) + 3) * 60 * 1000,
+    let tim = (Math.floor(Math.random() * (5 - 0.5 + 1)) + 0.5) * 60 * 1000,
       aaa = tim / 1000;
     console.log("Minutes: " + tim / 60 / 1000);
     console.log("Seconds: " + tim / 1000);
@@ -30,14 +16,10 @@
       aaa--;
       if (tim <= 0) {
         clearInterval(i);
-      }
-    }, 1000);
-    setTimeout(() => {
-      tele().then(() => {
         document.write(
           '<p style=" text-align:center;font-size: 150%;color:green;"id="gaama">SUCCESS</p>'
         );
-      });
-    }, tim);
+      }
+    }, 1000);
   </script>
 </html>
