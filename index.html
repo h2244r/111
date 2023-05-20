@@ -7,14 +7,14 @@
     ></p>
   </body>
   <script>
-    let tim = (Math.floor(Math.random() * (5 - 0.5 + 1)) + 0.5) * 60 * 1000,
+    let tim = (Math.floor(Math.random() * 5) + 0.5) * 60 * 1000,
       aaa = tim / 1000;
     console.log("Minutes: " + tim / 60 / 1000);
     console.log("Seconds: " + tim / 1000);
     let i = setInterval(() => {
       document.querySelector("#timer").textContent = aaa + " Seconds";
       aaa--;
-      if (tim <= 0) {
+      if (aaa <= 0) {
         clearInterval(i);
         document.write(
           '<p style=" text-align:center;font-size: 150%;color:green;"id="gaama">SUCCESS</p>'
